@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block top %} {% endblock %}</title>
+    <style>
+        .message {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3
+        }
+        nav a {
+            color: #d64161;
+            font-size: 3em;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">My App</a>
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
